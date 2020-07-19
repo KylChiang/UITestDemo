@@ -12,7 +12,7 @@ import FBSDKLoginKit
 
 struct ContentView: View {
     var body: some View {
-        login().frame(width: 100, height: 44)
+        loginButton().frame(width: 100, height: 44)
     }
 }
 
@@ -22,10 +22,10 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct login: UIViewRepresentable {
+struct loginButton: UIViewRepresentable {
     
     func makeCoordinator() -> Coordinator {
-        return login.Coordinator()
+        return loginButton.Coordinator()
     }
     
     func makeUIView(context: Context) -> FBLoginButton {
