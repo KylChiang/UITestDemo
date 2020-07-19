@@ -45,7 +45,13 @@ struct loginButton: UIViewRepresentable {
                 return
             }
             
-            // @TODO: Auth success
+            // Auth success
+            let request = GraphRequest(graphPath: "me", parameters: ["fields": "email, name, picture.type(normal)"])
+            request.start { (_, result, error) in
+                if let data = result as? [String: Any] {
+                    print("result: \(data)")
+                }
+            }
         }
         
         func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
