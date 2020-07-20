@@ -10,15 +10,27 @@ import SwiftUI
 import FBSDKLoginKit
 
 struct ContentView: View {
+    @State var userName = ""
+    @State var email = ""
+    @State var id = ""
+    
     var body: some View {
-        Button(action: {
-            if let token = AccessToken.current, !token.isExpired {
-                self.getMemberInfo()
-            } else {
-                self.loginFB()
+        VStack {
+            VStack(alignment: .leading, spacing: 4) {
+                Text("User Name: \(userName)")
+                Text("Email: \(email)")
+                Text("ID: \(id)")
             }
-        }) {
-            Text("Facebook Login")
+            Spacer().frame(width: 100, height: 50)
+            Button(action: {
+                if let token = AccessToken.current, !token.isExpired {
+                    self.getMemberInfo()
+                } else {
+                    self.loginFB()
+                }
+            }) {
+                Text("Facebook Login")
+            }
         }
     }
 }
@@ -42,6 +54,9 @@ extension ContentView {
         request.start { (_, result, error) in
             if let data = result as? [String: Any] {
                 print("result: \(data)")
+                self.userName = data["name"] as? String ?? ""
+                self.email = data["email"] as? String ?? ""
+                self.id = data["id"] as? String ?? ""
             }
         }
     }
