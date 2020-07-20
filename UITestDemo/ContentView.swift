@@ -10,16 +10,14 @@ import SwiftUI
 import FBSDKLoginKit
 
 struct ContentView: View {
-    @State var userName = ""
-    @State var email = ""
-    @State var id = ""
+    @EnvironmentObject var info: MemberInfo
     
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("User Name: \(userName)")
-                Text("Email: \(email)")
-                Text("ID: \(id)")
+                Text("User Name: \(info.member.userName)")
+                Text("Email: \(info.member.email)")
+                Text("ID: \(info.member.id)")
             }
             Spacer().frame(width: 100, height: 50)
             Button(action: {
@@ -37,7 +35,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(MemberInfo())
     }
 }
 
@@ -54,9 +52,9 @@ extension ContentView {
         request.start { (_, result, error) in
             if let data = result as? [String: Any] {
                 print("result: \(data)")
-                self.userName = data["name"] as? String ?? ""
-                self.email = data["email"] as? String ?? ""
-                self.id = data["id"] as? String ?? ""
+                self.info.member.userName = data["name"] as? String ?? ""
+                self.info.member.email = data["email"] as? String ?? ""
+                self.info.member.id = data["id"] as? String ?? ""
             }
         }
     }

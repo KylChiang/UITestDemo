@@ -16,6 +16,8 @@
 		C6E34FF624C42730004E31E3 /* UITestDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E34FF524C42730004E31E3 /* UITestDemoTests.swift */; };
 		C6E3500124C42730004E31E3 /* UITestDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3500024C42730004E31E3 /* UITestDemoUITests.swift */; };
 		C6E3501024C4309D004E31E3 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = C6E3500F24C4309D004E31E3 /* FacebookLogin */; };
+		C6E3501824C58AFB004E31E3 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3501724C58AFB004E31E3 /* Member.swift */; };
+		C6E3501A24C5BF19004E31E3 /* MemberInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E3501924C5BF19004E31E3 /* MemberInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		C6E34FFC24C42730004E31E3 /* UITestDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UITestDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E3500024C42730004E31E3 /* UITestDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestDemoUITests.swift; sourceTree = "<group>"; };
 		C6E3500224C42730004E31E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6E3501724C58AFB004E31E3 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		C6E3501924C5BF19004E31E3 /* MemberInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				C6E34FDE24C4272F004E31E3 /* AppDelegate.swift */,
 				C6E34FE024C4272F004E31E3 /* SceneDelegate.swift */,
 				C6E34FE224C4272F004E31E3 /* ContentView.swift */,
+				C6E3501924C5BF19004E31E3 /* MemberInfo.swift */,
+				C6E3501724C58AFB004E31E3 /* Member.swift */,
 				C6E34FE424C42730004E31E3 /* Assets.xcassets */,
 				C6E34FE924C42730004E31E3 /* LaunchScreen.storyboard */,
 				C6E34FEC24C42730004E31E3 /* Info.plist */,
@@ -275,9 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6E3501A24C5BF19004E31E3 /* MemberInfo.swift in Sources */,
 				C6E34FDF24C4272F004E31E3 /* AppDelegate.swift in Sources */,
 				C6E34FE124C4272F004E31E3 /* SceneDelegate.swift in Sources */,
 				C6E34FE324C4272F004E31E3 /* ContentView.swift in Sources */,
+				C6E3501824C58AFB004E31E3 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
