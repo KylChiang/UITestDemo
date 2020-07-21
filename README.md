@@ -1,2 +1,3 @@
 # UITestDemo
-A demo project about FB login UITest with SwiftUI+MVVM structure.
+## Features
+1. FB login UITest with SwiftUI+MVVM structure.
